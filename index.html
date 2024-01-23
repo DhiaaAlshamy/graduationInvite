@@ -203,6 +203,43 @@
             animation: fadeInAnimation ease-in 1s;
             animation-fill-mode: forwards;
         }
+        @media only screen and (max-width: 600px) {
+    .mycontainer {
+        flex-direction: column;
+    }
+
+    .invitation {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .invitation h1 {
+        font-size: 36px; /* Adjusted for smaller screens */
+    }
+
+    .invitation h2 {
+        font-size: 22px; /* Adjusted for smaller screens */
+    }
+
+    .invitation p {
+        font-size: 16px; /* Adjusted for smaller screens */
+    }
+
+    .event-details-container {
+        flex-direction: column;
+    }
+
+    .event-detail {
+        margin: 10px 0; /* Adjusted spacing for smaller screens */
+    }
+
+    .header-decor,
+    .footer-decor {
+        width: 150px; /* Adjusted for smaller screens */
+    }
+}
+
     </style>
 </head>
 
