@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Graduation Party Invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Lateef&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-image: url('background.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .mycontainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            /* background: linear-gradient(to bottom, #f7f8fa, #e6e9ec); */
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .invitation {
+            width: 600px;
+            height: 600px;
+            padding: 40px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            background-image: url('graduation_cap.svg');
+            background-position: top;
+            background-repeat: no-repeat;
+
+        }
+
+        .frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .frame.active {
+            display: flex;
+            animation: fadeIn ease 2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .header-decor,
+        .footer-decor {
+            position: absolute;
+            width: 200px;
+            height: auto;
+        }
+
+        .header-decor {
+            top: -20px;
+            left: -10px;
+            animation: slideInFromLeft 3s ease forwards;
+            backdrop-filter: opicity(20%);
+        }
+
+        .footer-decor {
+            bottom: -10px;
+            right: -20px;
+            animation: slideInFromRight 3s ease forwards;
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .invitation h1,
+        .invitation h2,
+        .invitation p {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .invitation h1 {
+            font-size: 60px;
+            font-family: 'Great Vibes', cursive;
+            /* increased size */
+            color: #4a4e69;
+            /* new color */
+            margin-bottom: 20px;
+        }
+
+
+        .invitation h2 {
+            font-family: 'Cairo', sans-serif;
+            font-size: 30px;
+            /* adjusted size */
+            color: #9a8c98;
+            /* new color */
+            font-weight: 600;
+            /* increased weight */
+            margin-bottom: 15px;
+        }
+
+        .invitation p {
+            font-family: 'Amiri', serif;
+            font-size: 20px;
+            /* increased size */
+            color: #22223b;
+            /* new color */
+            line-height: 1.6;
+            /* adjusted line height */
+            margin-bottom: 15px;
+        }
+
+        .event-details-container {
+            display: flex;
+            justify-content: space-between;
+            background: url('/path-to-your-texture.png');
+            /* Add your texture background */
+            padding: 20px;
+        }
+
+        .event-detail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            /* Ensures equal width for all items */
+            margin: 0 10px;
+            /* Spacing between items */
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .event-text p {
+            margin: 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInAnimation ease-in 1s;
+            animation-fill-mode: forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mycontainer">
+
+        <div class="invitation">
+            <div id="frame1" class="frame active">
+
+                <h1>Graduation Party</h1>
+                <h2>عظم المراد فهان الطريق</h2>
+                <p>الحمد لله الذي ما تيقنت به خيرا وأملا</p>
+                <p>إلا وأغرقني سرورا</p>
+            </div>
+
+            <div id="frame2" class="frame">
+                <h2>تم بحمد الله </h2>
+                <h1>تخرجي</h1>
+                <p>من الجامعة وحصولي على درجة البكالوريوس - تخصصص علوم حاسب </p>
+                <p>فالحمد لله الذي هيأ للبدئ ويسر للعسر وطيب المنتهى واوصلني الى الختام</p>
+            </div>
+
+            <div id="frame3" class="frame">
+
+                <h2 style="padding-top: 32px;">دعوة خاصة</h2>
+                <p>في العمر أيام يزينها السرور وسرور هذا اليوم جدا مختلف </p>
+                <h2>بكل حب أدعوك لتكوني جزء من فرحتي لحضور حفلة تخرجي </h2>
+                <p> : وذلك بمشيئة الله تعالى </p>
+
+                <div class="event-details-container">
+                    <div class="event-detail">
+                        <i class="fas fa-calendar-alt icon"></i>
+                        <div class="event-text">
+                            <p>Friday 21.7.1445 2.2.2024</p>
+                        </div>
+                    </div>
+                    <div class="event-detail">
+                        <i class="fas fa-clock icon"></i>
+                        <div class="event-text">
+                            <p>10:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="event-detail">
+                        <i class="fas fa-map-marker-alt icon"></i>
+                        <div class="event-text">
+                            <a href="https://maps.app.goo.gl/xf16T9HxJSVjkSeq7?g_st=ic">Location</a>
+                        </div>
+                    </div>
+                    <div class="event-detail">
+                        <i class="fas fa-birthday-cake icon"></i>
+                        <div class="event-text">
+                            <p>12:00 AM</p>
+                        </div>
+                    </div>
+                    <div class="event-detail">
+                        <i class="fas fa-utensils icon"></i>
+                        <div class="event-text">
+                            <p>1:00 AM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p>لقاؤكم المحبب يزيد انسي فقربكم المسرة والسعادة</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let currentFrame = 1;
+        function showFrame(frameId) {
+            document.querySelectorAll('.frame').forEach(frame => frame.classList.remove('active'));
+            document.getElementById(frameId).classList.add('active');
+        }
+
+        setInterval(() => {
+            currentFrame = currentFrame == 3 ? currentFrame : currentFrame + 1;
+            showFrame('frame' + currentFrame);
+        }, 10000);
+
+    </script>
+</body>
+
+</html>
